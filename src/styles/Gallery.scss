@@ -1,0 +1,25 @@
+#gallery {
+    display: block;
+    margin: 0 20px 0 20px;
+}
+
+@media screen and (min-width: 767px) {
+    #gallery {
+        margin: 0 100px 0 100px;
+        display: block;
+        display: grid;
+        grid-auto-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px 60px;
+        margin-top: 43px;
+        background-color: #F6F6F6;
+        border-radius: 25px;
+        padding: 56px 50px 56px 50px;
+    }
+}
+
+@media screen and (min-width: 1183px) {
+    #gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

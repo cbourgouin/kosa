@@ -1,0 +1,30 @@
+article {
+    position: relative;
+    height: 335px;
+    width: 100%;
+    margin-top: 22px;
+    border-radius: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%);
+    }
+
+    a {
+        position: absolute;
+        bottom: 15px;
+        left: 20px;
+        color: #fff;
+        font-size: 18px;
+    }
+}
