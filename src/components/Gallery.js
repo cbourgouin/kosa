@@ -1,6 +1,6 @@
 import logements from '../assets/logements.json'
 import Card from '../components/Card';
-import "../styles/Gallery.scss"
+import "../styles/components/Gallery.scss"
 
 function Gallery() {
 

@@ -1,10 +1,16 @@
-import "../styles/Card.scss"
+import "../styles/components/Card.scss"
 
 function Card(props) {
-    return <article 
-                style={{backgroundImage: "url(" + props["logement"]["pictures"]["0"] + ")"}}
-            > 
-        <a>{props["logement"]["title"]}</a> 
+
+    const handleClick = (id) =>  {
+        window.location.href = "/logement/" + props["logement"]["id"];
+    }
+
+    return <article
+        style={{ backgroundImage: "url(" + props["logement"]["pictures"]["0"] + ")" }}
+        onClick={() => handleClick(props["logement"]["id"])}
+    >
+        <a>{props["logement"]["title"]}</a>
     </article>
 }
 

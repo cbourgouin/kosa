@@ -1,0 +1,244 @@
+#logement {
+    #carousel {
+        margin: 27px 20px 0 20px;
+        height: 255px;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        border-radius: 10px;
+
+        button {
+            position: relative;
+            width: 24px;
+            background: none;
+            border: none;
+            z-index: 2;
+            font-size: 24px;
+            color: #fff;
+
+            &.next {
+                right: 48px;
+            }
+        }
+
+        img {
+            position: relative;
+            top: 0;
+            left: -24px;
+            height: 100%;
+            min-width: 100%;
+            z-index: 1;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    #titleAndTags {
+
+        titles {
+            margin: 15px 20px 0 20px;
+            color: #FF6060;
+            line-height: 142.6%;
+            display: flex;
+            flex-direction: column;
+
+            #primary {
+                font-size: 18px;
+            }
+
+            #secondary {
+                font-size: 14px;
+                margin: 5px 0 0 0;
+            }
+        }
+
+        #tags {
+            display: flex;
+            gap: 10px;
+            margin: 10px 20px 0 20px;
+            width: auto;
+            flex-wrap: wrap;
+
+            .tag {
+                display: flex;
+                align-items: center;
+                height: 18px;
+                padding: 0 30px 0 30px;
+                background-color: #FF6060;
+                border-radius: 5px;
+                font-size: 10px;
+                color: #fff;
+                align-items: center;
+
+                a {
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+
+    #ttrh {
+        #ratingAndHost {
+            display: flex;
+            margin: 16px 20px 0 20px;
+            height: 33px;
+            justify-content: space-between;
+            align-items: center;
+
+            #rating {
+                font-size: 13px;
+
+                i {
+                    margin: 0 7px 0 0;
+                }
+
+                .active {
+                    color: #FF6060;
+                }
+
+                .inactive {
+                    color: #E3E3E3;
+                }
+
+            }
+
+            #host {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                a {
+                    color: #FF6060;
+                    text-align: right;
+                    font-size: 12px;
+                    height: fit-content;
+                    max-width: 80px;
+                }
+
+                img {
+                    height: 32px;
+                    width: 32px;
+                    object-fit: cover;
+                    object-position: center;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+        #descriptionAndEquipment {
+            .dropdown {
+                margin: 20px 20px 0 20px;
+            }
+        }
+    
+}
+
+@media screen and (min-width: 767px) {
+    #logement {
+        #carousel {
+            margin: 27px 100px 0 100px;
+            border-radius: 25px;
+            height: 415px;
+
+            button {
+                width: 96px;
+                font-size: 80px;
+
+                &.next {
+                    right: 192px;
+                }
+            }
+
+            img {
+                left: -96px;
+                width: 110%;
+            }
+        }
+
+        #ttrh {
+            display: flex;
+            margin: 30px 100px 0 100px;
+            height: 122px;
+            align-items: center;
+            justify-content: space-between;
+
+            #titleAndTags {
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+                
+                titles {
+                    margin: 0;
+
+                    #primary {
+                        font-size: 36px;
+                        height: 51px;
+                    }
+
+                    #secondary {
+                        margin: 0;
+                        font-size: 18px;
+                        height: 26px;
+                    }
+                }
+
+                #tags {
+                    margin: 20px 0 0 0;
+
+                    .tag {
+                        height: 25px;
+                        border-radius: 10px;
+                    }
+                }
+            }
+
+            #ratingAndHost {
+                margin: 0;
+                height: 100%;
+                display: flex;
+                flex-direction: column-reverse;
+
+                #rating {
+                    font-size: 24px;
+
+                    i {
+                        margin: 0 14px 0 0;
+
+                        &:nth-child(5) {
+                            margin: 0;
+                        }
+                    }
+                }
+
+                #host {
+                    width: 100%;
+                    justify-content: flex-end;
+                    height: 64px;
+
+                    a {
+                        font-size: 18px;
+                    }
+
+                    img {
+                        width: 64px;
+                        height: 64px;
+                    }
+                }
+            }
+        }
+
+        #descriptionAndEquipment {
+            display: flex;
+            flex-direction: row;
+            margin: 24px 100px 0 100px;
+            gap: 76px;
+
+            .dropdown {
+                width: 50%;
+                margin: 0;
+            }
+        }
+    }
+}

@@ -1,5 +1,5 @@
 import logoKosaWhite from "../assets/logo_white.png";
-import "../styles/Footer.scss";
+import "../styles/components/Footer.scss";
 
 function Footer() {
     return <footer>

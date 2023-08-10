@@ -1,0 +1,101 @@
+.dropdown {
+    #title {
+        position: relative;
+        height: 30px;
+        background-color: #FF6060;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+        z-index: 2;
+
+        a {
+            margin: 0 0 0 12px;
+            font-size: 13px;
+        }
+
+        i {
+            margin: 0 6px 0 0;
+            transform: rotate(0deg);
+            transition: transform 0.5s ease-in-out;
+        }
+    }
+
+    #text {
+        position: relative;
+        margin: 0;
+        top: -5px;
+        height: 144px;
+        background-color: #F6F6F6;
+        z-index: 1;
+        overflow: hidden;
+        transition: all 0.5s linear;
+        font-weight: 400;
+
+        p {
+            color: #FF6060;
+            font-family: Montserrat;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 142.6%;
+            margin: 23px 10px 0 10px;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.5s linear;
+        }
+    }
+
+    &.inactive {
+        #text {
+            height: 0;
+        }
+    }
+
+    &.active {
+        #title {
+            i {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+
+}
+
+@media screen and (min-width: 767px) {
+    .dropdown {
+        #title {
+            height: 47px;
+
+            a {
+                margin: 0 0 0 18px;
+                font-size: 24px;
+            }
+
+            i {
+                margin: 0 9px 0 0;
+                font-size: 32px;
+            }
+        }
+
+        #text {
+            max-height: 300px;
+            height: auto;
+
+            p {
+                margin: 36px 20px 20px 20px;
+                font-size: 24px;
+            }
+        }
+
+        &.inactive {
+            #text {
+                height: none;
+                max-height: 0;
+                height: none;
+            }
+        }
+    }
+}
