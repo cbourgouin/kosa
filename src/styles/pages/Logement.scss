@@ -1,4 +1,14 @@
 #logement {
+    header {
+    
+        #navbar {
+            
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+
     #carousel {
         margin: 27px 20px 0 20px;
         height: 255px;
@@ -31,6 +41,10 @@
             object-fit: cover;
             object-position: center;
         }
+
+        .count {
+            display: none;
+        }
     }
 
     #titleAndTags {
@@ -38,7 +52,6 @@
         titles {
             margin: 15px 20px 0 20px;
             color: #FF6060;
-            line-height: 142.6%;
             display: flex;
             flex-direction: column;
 
@@ -127,12 +140,16 @@
         }
     }
 
-        #descriptionAndEquipment {
-            .dropdown {
-                margin: 20px 20px 0 20px;
-            }
+    #descriptionAndEquipment {
+        .dropdown {
+            margin: 20px 20px 0 20px;
         }
-    
+    }
+
+    footer {
+        margin: 100px 0 0 0;
+    }
+
 }
 
 @media screen and (min-width: 767px) {
@@ -141,26 +158,41 @@
             margin: 27px 100px 0 100px;
             border-radius: 25px;
             height: 415px;
+            transform: inherit;
 
             button {
                 width: 96px;
                 font-size: 80px;
 
                 &.next {
-                    right: 192px;
+                    right: 124px;
                 }
             }
 
             img {
-                left: -96px;
+                left: -62px;
                 width: 110%;
+            }
+
+            .count {
+                display: flex;
+                position: absolute;
+                font-size: 18px;
+                height: 32px;
+                left: -100px;
+                top: 472px;
+                width: 100%;
+                margin: 0 100px 0 100px;
+                color: #fff;
+                z-index: 2;
+                justify-content: center;
             }
         }
 
         #ttrh {
             display: flex;
             margin: 30px 100px 0 100px;
-            height: 122px;
+            min-height: 122px;
             align-items: center;
             justify-content: space-between;
 
@@ -168,24 +200,25 @@
                 display: flex;
                 flex-direction: column;
                 margin: 0;
-                
+
                 titles {
                     margin: 0;
 
                     #primary {
                         font-size: 36px;
-                        height: 51px;
+                        min-height: 51px;
                     }
 
                     #secondary {
                         margin: 0;
                         font-size: 18px;
-                        height: 26px;
+                        min-height: 26px;
                     }
                 }
 
                 #tags {
                     margin: 20px 0 0 0;
+                    height: fit-content;
 
                     .tag {
                         height: 25px;
@@ -201,7 +234,11 @@
                 flex-direction: column-reverse;
 
                 #rating {
+                    display: flex;
+                    flex-direction: row;
                     font-size: 24px;
+                    flex-wrap: nowrap;
+                    margin: 21px 0 0 0;
 
                     i {
                         margin: 0 14px 0 0;
@@ -238,7 +275,25 @@
             .dropdown {
                 width: 50%;
                 margin: 0;
+
+                .title {
+
+                    a {
+                        font-size: 18px;
+                    }
+                }
+
+                .text {
+
+                    p {
+                        font-size: 18px;
+                    }
+                }
             }
+        }
+        
+        footer {
+            margin: 100px 0 0 0;
         }
     }
 }

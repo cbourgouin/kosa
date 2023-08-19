@@ -4,6 +4,7 @@ import './styles/index.scss';
 import App from './pages/App';
 import APropos from './pages/APropos';
 import Logement from './pages/Logement';
+import Error from './pages/Error';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,6 +15,7 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="/apropos" element={<APropos />} />
         <Route path="/logement/:id" element={<Logement />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </Router>
 

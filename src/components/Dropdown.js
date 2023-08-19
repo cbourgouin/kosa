@@ -7,8 +7,8 @@ function Dropdown({title, text}) {
     const onClick = () => setIsActive(!isActive);
 
     return <div className={isActive ? "dropdown active" : "dropdown inactive"} onClick={onClick}>
-        <div id="title"><a>{title}</a><i class="fa-solid fa-angle-down"></i></div>
-        <div id="text"><p>{text}</p></div>
+        <div className="title"><a>{title}</a><i class="fa-solid fa-angle-down"></i></div>
+        <div className="text"><p>{text}</p></div>
     </div>
 }
 

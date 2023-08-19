@@ -1,5 +1,5 @@
 .dropdown {
-    #title {
+    .title {
         position: relative;
         height: 30px;
         background-color: #FF6060;
@@ -22,16 +22,16 @@
         }
     }
 
-    #text {
+    .text {
         position: relative;
         margin: 0;
         top: -5px;
-        height: 144px;
         background-color: #F6F6F6;
         z-index: 1;
         overflow: hidden;
-        transition: all 0.5s linear;
+        transition: max-height 0.7s ease-in-out;
         font-weight: 400;
+        border-radius: 0 0 10px 10px;
 
         p {
             color: #FF6060;
@@ -40,24 +40,26 @@
             font-style: normal;
             font-weight: 400;
             line-height: 142.6%;
-            margin: 23px 10px 0 10px;
+            margin: 23px 10px 5px 10px;
             display: flex;
             flex-direction: column;
-            transition: all 0.5s linear;
         }
     }
 
     &.inactive {
-        #text {
-            height: 0;
+        .text {
+            max-height: 0;
         }
     }
 
     &.active {
-        #title {
+        .title {
             i {
                 transform: rotate(180deg);
             }
+        }
+        .text {
+            max-height: 500px;
         }
     }
 
@@ -66,7 +68,7 @@
 
 @media screen and (min-width: 767px) {
     .dropdown {
-        #title {
+        .title {
             height: 47px;
 
             a {
@@ -80,7 +82,7 @@
             }
         }
 
-        #text {
+        .text {
             max-height: 300px;
             height: auto;
 
@@ -91,7 +93,7 @@
         }
 
         &.inactive {
-            #text {
+            .text {
                 height: none;
                 max-height: 0;
                 height: none;
