@@ -7,11 +7,9 @@ function Dropdown({title, text}) {
     const onClick = () => setIsActive(!isActive);
 
     return <div className={isActive ? "dropdown active" : "dropdown inactive"} onClick={onClick}>
-        <div className="title"><a>{title}</a><i class="fa-solid fa-angle-down"></i></div>
+        <div className="title"><a>{title}</a><i className="fa-solid fa-angle-down"></i></div>
         <div className="text"><p>{text}</p></div>
     </div>
 }
-
-
 
 export default Dropdown;

@@ -38,14 +38,14 @@ function Logement() {
     return <div id="logement">
         <Header />
         <section id="carousel">
-            <button className="previous" onClick={() => data.pictures !== null ? previousImage(data.pictures.length) : false}><i class="fa-solid fa-chevron-left"></i></button>
+            <button className="previous" onClick={() => data.pictures !== null ? previousImage(data.pictures.length) : false}><i className="fa-solid fa-chevron-left"></i></button>
             {
                 data.pictures.map((picture, index) => (
                     <img src={picture} alt={"image"} key={index} style={imgActive === index ? { display: "block" } : { display: "none" }} />
                 ))
             }
             <a className="count">{ (imgActive + 1).toString() + "/" + data.pictures.length.toString()}</a>
-            <button className="next" onClick={() => data.pictures !== null ? nextImage(data.pictures.length) : false}><i class="fa-solid fa-chevron-right"></i></button>
+            <button className="next" onClick={() => data.pictures !== null ? nextImage(data.pictures.length) : false}><i className="fa-solid fa-chevron-right"></i></button>
         </section>
         <div id="ttrh">
             <div id="titleAndTags">
