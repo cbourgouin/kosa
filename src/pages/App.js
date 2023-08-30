@@ -1,16 +1,32 @@
 import Header from '../components/Header'
-import Banner from '../components/Banner'
-import Gallery from '../components/Gallery'
 import Footer from '../components/Footer'
+import logements from '../assets/logements.json'
+import Card from '../components/Card';
 import '../styles/pages/App.scss'
 
 function App() {
-    return ( <div id="app">
+
+    if (logements === null) {
+        return <div>Chargement...</div>;
+    }
+
+    return (<div id="app">
         <Header />
-        <Banner />
-        <Gallery />
+        <div id="banner">
+            <div>
+                <a>Chez vous,</a>
+                <a> partout et ailleurs</a>
+            </div>
+        </div>
+        <section id="gallery">
+            {
+                logements.map((logement) => (
+                    <Card logement={logement} key={logement["id"]}/>
+                ))
+            }
+        </section>
         <Footer />
-    </div> )
+    </div>)
 }
 
 export default App

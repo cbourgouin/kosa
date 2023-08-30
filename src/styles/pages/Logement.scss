@@ -49,10 +49,10 @@
 
     #titleAndTags {
 
-        titles {
+        #title {
             margin: 15px 20px 0 20px;
             color: #FF6060;
-            display: flex;
+            display: flex !important;
             flex-direction: column;
 
             #primary {
@@ -201,7 +201,7 @@
                 flex-direction: column;
                 margin: 0;
 
-                titles {
+                #title {
                     margin: 0;
 
                     #primary {

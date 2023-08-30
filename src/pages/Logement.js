@@ -29,9 +29,7 @@ function Logement() {
         }
     }
 
-    //Penser a renvoyer a la page 404 quand la données n'est pas trouver 
     if (data === undefined) {
-        // document.location.href = "/404";
         navigate("/404");
     }
 
@@ -44,15 +42,15 @@ function Logement() {
                     <img src={picture} alt={"image"} key={index} style={imgActive === index ? { display: "block" } : { display: "none" }} />
                 ))
             }
-            <a className="count">{ (imgActive + 1).toString() + "/" + data.pictures.length.toString()}</a>
+            <a className="count">{ (imgActive + 1).toString() + "/" + data.pictures.length.toString() }</a>
             <button className="next" onClick={() => data.pictures !== null ? nextImage(data.pictures.length) : false}><i className="fa-solid fa-chevron-right"></i></button>
         </section>
         <div id="ttrh">
             <div id="titleAndTags">
-                <title>
+                <div id="title">
                     <a id="primary">{data.title}</a>
                     <a id="secondary">{data.location}</a>
-                </title>
+                </div>
                 <section id="tags">
                     {
                         data.tags.map((tag, index) => (
@@ -72,7 +70,7 @@ function Logement() {
                     <i className={"fa-solid fa-star " + (parseInt(data["rating"]) > 4 ? "active" : "inactive")}></i>
                 </section>
                 <section id="host">
-                    <a>{data.name}</a>
+                    <a>{data.host.name}</a>
                     <img src={data.host.picture}></img>
                 </section>
             </div>
