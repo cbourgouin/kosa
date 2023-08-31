@@ -1,4 +1,8 @@
 #app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
     header #navbar .liens:nth-child(1) {
         text-decoration: underline;
     }
@@ -7,82 +11,90 @@
         text-decoration: none;
     }
 
-    #banner {
-        height: 111px;
-        position: relative;
-        width: auto;
-        margin: 16px 20px 0 20px;
-        border-radius: 10px;
-        background-image: url("../../assets/paysage.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        overflow: hidden;
+    #contenu {
+        flex: 1;
 
-        &::before {
-            content: "";
+        #banner {
+            height: 111px;
             position: relative;
+            width: auto;
+            margin: 16px 20px 0 20px;
+            border-radius: 10px;
+            background-image: url("../../assets/paysage.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+
+            &::before {
+                content: "";
+                position: relative;
+                display: block;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background: linear-gradient(rgba(0, 0, 0, 0.30000001192092896), rgba(0, 0, 0, 0.30000001192092896));
+            }
+
+            div {
+                color: #FFF;
+                font-size: 24px;
+                line-height: 100%;
+                position: absolute;
+                top: 31px;
+                left: 16px;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        #gallery {
             display: block;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background: linear-gradient(rgba(0, 0, 0, 0.30000001192092896), rgba(0, 0, 0, 0.30000001192092896));
+            margin: 0 20px 0 20px;
         }
-
-        div {
-            color: #FFF;
-            font-size: 24px;
-            line-height: 100%;
-            position: absolute;
-            top: 31px;
-            left: 16px;
-            display: flex;
-            flex-direction: column;
-        }
-    }
-
-    #gallery {
-        display: block;
-        margin: 0 20px 0 20px;
     }
 }
 
 @media screen and (min-width: 767px) {
     #app {
-        #banner {
-            height: 223px;
-            margin: 63px 100px 0 100px;
+        #contenu {
+            #banner {
+                height: 223px;
+                margin: 63px 100px 0 100px;
 
-            div {
-                width: 100%;
-                display: inline;
-                top: 78px;
-                left: 0px;
-                font-size: 48px;
-                text-align: center;
+                div {
+                    width: 100%;
+                    display: inline;
+                    top: 78px;
+                    left: 0px;
+                    font-size: 48px;
+                    text-align: center;
+                }
             }
-        }
 
-        #gallery {
-            margin: 0 100px 0 100px;
-            display: block;
-            display: grid;
-            grid-auto-rows: 1fr;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px 60px;
-            margin-top: 43px;
-            background-color: #F6F6F6;
-            border-radius: 25px;
-            padding: 56px 50px 56px 50px;
+            #gallery {
+                margin: 0 100px 0 100px;
+                display: block;
+                display: grid;
+                grid-auto-rows: 1fr;
+                grid-template-columns: 1fr 1fr;
+                gap: 50px 60px;
+                margin-top: 43px;
+                background-color: #F6F6F6;
+                border-radius: 25px;
+                padding: 56px 50px 56px 50px;
+            }
         }
     }
 }
 
 @media screen and (min-width: 1183px) {
     #app {
-        #gallery {
-            grid-template-columns: 1fr 1fr 1fr;
+        #contenu {
+            #gallery {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
         }
     }
 }

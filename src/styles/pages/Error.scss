@@ -1,4 +1,8 @@
 #error {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
     header {
     
         #navbar {
@@ -9,11 +13,12 @@
         }
     }
 
-    .container {
+    #contenu {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 200px 0 0 0;
+        flex: 1;
 
         h1 {
             color: #FF6060;
@@ -46,14 +51,14 @@
     }
 
     footer {
-        margin: 100px 0 0 0;
+        margin: 20px 0 0 0;
     }
 }
 
 @media screen and (min-width: 767px) {
     #error {
         
-        .container {
+        #contenu {
             margin: 167px 0 0 0;
 
             h1 {
@@ -76,6 +81,10 @@
                 font-size: 18px;
                 margin-top: 182px;
             }
+        }
+
+        footer {
+            margin: 100px 0 0 0;
         }
     }
 }

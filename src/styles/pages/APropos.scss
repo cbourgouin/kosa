@@ -1,52 +1,58 @@
 #apropos {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 
     header #navbar .liens:nth-child(1) {
         text-decoration: none;
     }
-    
+
     header #navbar .liens:nth-child(2) {
         text-decoration: underline;
     }
 
-    #banner {
-        margin: 17px 20px 0 20px;
-        border-radius: 10px;
-        height: 223px;
-        width: auto;
-        background-image: url("../../assets/paysage_apropos.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        overflow: hidden;
-        
+    #contenu {
+        flex: 1;
 
-        &::before {
-            content: "";
-            position: relative;
-            display: block;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30));
-        }
-    }
-
-    .dropdown {
-        margin: 30px 20px 0 20px;
-    }
-
-    footer {
-        margin-top: 120px;
-    }
-
-    @media screen and (min-width: 767px) {
         #banner {
-            margin: 50px 100px 0 100px;
+            margin: 17px 20px 0 20px;
+            border-radius: 10px;
+            height: 223px;
+            width: auto;
+            background-image: url("../../assets/paysage_apropos.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+
+
+            &::before {
+                content: "";
+                position: relative;
+                display: block;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30));
+            }
         }
 
         .dropdown {
-            margin: 30px 200px 0 200px;
+            margin: 30px 20px 0 20px;
+        }
+    }
+
+    @media screen and (min-width: 767px) {
+
+        #contenu {
+            #banner {
+                margin: 50px 100px 0 100px;
+            }
+            
+            .dropdown {
+                margin: 30px 200px 0 200px;
+            }
         }
     }
 }

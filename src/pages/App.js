@@ -12,19 +12,21 @@ function App() {
 
     return (<div id="app">
         <Header />
-        <div id="banner">
-            <div>
-                <a>Chez vous,</a>
-                <a> partout et ailleurs</a>
+        <div id="contenu">
+            <div id="banner">
+                <div>
+                    <a>Chez vous,</a>
+                    <a> partout et ailleurs</a>
+                </div>
             </div>
+            <section id="gallery">
+                {
+                    logements.map((logement) => (
+                        <Card logement={logement} key={logement["id"]} />
+                    ))
+                }
+            </section>
         </div>
-        <section id="gallery">
-            {
-                logements.map((logement) => (
-                    <Card logement={logement} key={logement["id"]}/>
-                ))
-            }
-        </section>
         <Footer />
     </div>)
 }
