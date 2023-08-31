@@ -40,14 +40,14 @@ function Logement() {
             <Header />
             <div id="contenu">
                 <section id="carousel">
-                    <button className="previous" onClick={() => data.pictures !== null ? previousImage(data.pictures.length) : false}><i className="fa-solid fa-chevron-left"></i></button>
+                    <button className="previous" style={data.pictures.length !== 1 ? { display: "block" } : { display: "none" }} onClick={() => data.pictures !== null ? previousImage(data.pictures.length) : false}><i className="fa-solid fa-chevron-left"></i></button>
                     {
                         data.pictures.map((picture, index) => (
                             <img src={picture} alt={"image"} key={index} style={imgActive === index ? { display: "block" } : { display: "none" }} />
                         ))
                     }
-                    <a className="count">{(imgActive + 1).toString() + "/" + data.pictures.length.toString()}</a>
-                    <button className="next" onClick={() => data.pictures !== null ? nextImage(data.pictures.length) : false}><i className="fa-solid fa-chevron-right"></i></button>
+                    <a className="count" style={data.pictures.length !== 1 ? { display: "flex" } : { display: "none" }}>{(imgActive + 1).toString() + "/" + data.pictures.length.toString()}</a>
+                    <button className="next" style={data.pictures.length !== 1 ? { display: "block" } : { display: "none" }} onClick={() => data.pictures !== null ? nextImage(data.pictures.length) : false}><i className="fa-solid fa-chevron-right"></i></button>
                 </section>
                 <div id="ttrh">
                     <div id="titleAndTags">
