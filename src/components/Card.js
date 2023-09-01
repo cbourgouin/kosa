@@ -3,7 +3,7 @@ import "../styles/components/Card.scss"
 function Card(props) {
 
     const handleClick = (id) =>  {
-        window.location.href = "/logement/" + props["logement"]["id"];
+        window.location.href = "/logement/" + id;
     }
 
     return <article
